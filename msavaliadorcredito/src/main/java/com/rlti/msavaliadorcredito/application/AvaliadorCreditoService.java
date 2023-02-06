@@ -81,8 +81,8 @@ public class AvaliadorCreditoService {
         }
     }
 
-    public ProtocoloSolicitacaoCartao solicitarEmissaoCartao(DadosSolicitacaoEmissaoCartao dados ){
-        try {
+    public ProtocoloSolicitacaoCartao solicitarEmissaoCartao(DadosSolicitacaoEmissaoCartao dados){
+        try{
             emissaoCartaoPublisher.solicitarCartao(dados);
             var protocolo = UUID.randomUUID().toString();
             return new ProtocoloSolicitacaoCartao(protocolo);
